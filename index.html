@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Amiratama Tour and Organizer - Biro perjalanan wisata dan organizer rombongan terpercaya berpusat di Semarang, Jawa Tengah. Melayani wisata domestik &amp; internasional, study tour &amp; KKL, gathering instansi, wisata ziarah, dan outbound."/>
+  <title>Amiratama Tour and Organizer | Biro Perjalanan &amp; Event Organizer Rombongan Semarang</title>
+
+  <!-- Preconnect & Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Preload Initial Hero Background Image -->
+  <link rel="preload" as="image" href="https://lh3.googleusercontent.com/aida-public/AB6AXuC49P9wmnJux3wbIkhowz-vaVj159tKaIOkdRAKWZ7Ss9hVhsOpyXWi7hWD3tICoXMHw14tP0la-4unOgQGnkWpEtEK_c7tEFUZwQXLhW48e07MLrnaWxAL4_Ae7n7-rSjatb-NkqKkkBSz9GeYFK6QP87SCDKRqBITXbn29VjKwdJZsLDm0e2GV1gWpEZ3COSL6LTNsDV2jUjRJW9ooUFa2SQHf2Tog6vkoMUw-h8"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: "#264471", // Primary Navy
+              dark: "#1A3050",    // Dark Navy
+              light: "#355b92",
+              50: "#EDF2F8",      // Light Blue-Gray
+              100: "#dbe5f2",
+              200: "#bad0e7",
+              800: "#1A3050",
+              900: "#122137"
+            },
+            orange: {
+              DEFAULT: "#DD6631", // Primary Orange
+              dark: "#BF5222",    // Dark Orange
+              light: "#e67745",
+              peach: "#FCE9DF",   // Soft Peach
+              50: "#fff8f5"
+            },
+            slate: {
+              surface: "#EDF2F8",
+              body: "#3A4656"     // Body Text
+            }
+          },
+          fontFamily: {
+            sans: ["'Plus Jakarta Sans'", "system-ui", "-apple-system", "sans-serif"],
+            inter: ["'Inter'", "sans-serif"]
+          },
+          boxShadow: {
+            'subtle': '0 2px 10px rgba(26, 48, 80, 0.04)',
+            'card': '0 10px 30px -5px rgba(26, 48, 80, 0.06)',
+            'card-hover': '0 20px 40px -10px rgba(26, 48, 80, 0.12)',
+            'nav': '0 4px 25px rgba(26, 48, 80, 0.07)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- External Script -->
+  <script src="js/main.js" defer></script>
+</head>
+<body class="font-sans antialiased text-slate-body bg-white selection:bg-orange selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. DYNAMIC STICKY NAVBAR (Transparent on top, Solid white on scroll)       -->
+  <!-- ========================================================================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 py-5 bg-transparent is-transparent" role="banner">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between">
+      
+      <!-- Logo & Brand Header -->
+      <a href="#beranda" class="group flex items-center gap-3.5 focus:outline-none" aria-label="Amiratama Tour and Organizer Beranda">
+        <div id="logo-badge" class="h-10 w-10 sm:h-11 sm:w-11 rounded-lg overflow-hidden bg-white/10 backdrop-blur-sm p-1 border border-white/20 transition-all duration-300 flex items-center justify-center shrink-0">
+          <img src="images/logo-brand.jpg" alt="Amiratama Logo" class="h-full w-full object-contain rounded" onerror="this.src='https://lh3.googleusercontent.com/aida/ALJJyrC_RgDWNjy4Z3wPoT6ErdoQTlBDtnj87_cscEpIdJz4VUb1lFcaHZyKbDUcZH4Hov9RkfZR202xOy9mDWUjX7re0qKtu0gttgT-9kRv7iydHus5UT9wJpM64ifHUcDUARZcrzAaFDVzA3I0dEHwlic-ghdUe3joTRU7CyBzyOIQqKeBcFRJIlGjod1uQFnk2JS0IRmXYfufHCCftYz7PydESEGqqbACYm7wSibm9zKrtZuIRAo3_f-iP-8'"/>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1">
+            <span id="nav-brand-title" class="font-bold text-xl sm:text-2xl tracking-tight text-white transition-colors duration-300">Amiratama</span>
+            <span class="inline-block w-2 h-2 rounded-full bg-orange"></span>
+          </div>
+          <span id="nav-brand-subtitle" class="text-[11px] uppercase tracking-wider font-semibold text-slate-300 transition-colors duration-300">Tour &amp; Organizer • Semarang</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu with Active Highlight -->
+      <nav id="desktop-nav-container" class="hidden lg:flex items-center gap-1 px-3 py-1.5 rounded-full transition-all duration-300" aria-label="Main Navigation">
+        <a href="#beranda" class="nav-link px-4 py-2 text-sm font-semibold rounded-full active" data-target="beranda">Beranda</a>
+        <a href="#layanan" class="nav-link px-4 py-2 text-sm font-semibold rounded-full" data-target="layanan">Layanan</a>
+        <a href="#destinasi" class="nav-link px-4 py-2 text-sm font-semibold rounded-full" data-target="destinasi">Destinasi</a>
+        <a href="#keunggulan" class="nav-link px-4 py-2 text-sm font-semibold rounded-full" data-target="keunggulan">Keunggulan</a>
+        <a href="#galeri" class="nav-link px-4 py-2 text-sm font-semibold rounded-full" data-target="galeri">Galeri</a>
+        <a href="#kontak" class="nav-link px-4 py-2 text-sm font-semibold rounded-full" data-target="kontak">Kontak</a>
+      </nav>
+
+      <!-- Desktop Action: Clean Primary CTA Button with Official WhatsApp Icon (Direct Desk removed for clean layout) -->
+      <div class="hidden md:flex items-center">
+        <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20perjalanan%20rombongan." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-orange hover:bg-orange-dark text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange/50">
+          <!-- Official WhatsApp SVG Icon -->
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+          </svg>
+          <span>Konsultasi Sekarang</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl text-white hover:bg-white/10 focus:outline-none transition-colors" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="material-symbols-outlined text-[28px]">menu</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer & Backdrop -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300 lg:hidden" aria-hidden="true" role="dialog" aria-modal="true">
+    <div id="mobile-backdrop" class="absolute inset-0 bg-black/85 backdrop-blur-sm transition-opacity duration-300"></div>
+
+    <div id="mobile-panel" class="absolute top-0 right-0 bottom-0 w-full max-w-sm bg-white shadow-2xl flex flex-col justify-between p-6 transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-lg overflow-hidden bg-navy-50 p-1 border border-slate-200">
+              <img src="images/logo-brand.jpg" alt="Amiratama Logo" class="h-full w-full object-contain rounded" onerror="this.src='https://lh3.googleusercontent.com/aida/ALJJyrC_RgDWNjy4Z3wPoT6ErdoQTlBDtnj87_cscEpIdJz4VUb1lFcaHZyKbDUcZH4Hov9RkfZR202xOy9mDWUjX7re0qKtu0gttgT-9kRv7iydHus5UT9wJpM64ifHUcDUARZcrzAaFDVzA3I0dEHwlic-ghdUe3joTRU7CyBzyOIQqKeBcFRJIlGjod1uQFnk2JS0IRmXYfufHCCftYz7PydESEGqqbACYm7wSibm9zKrtZuIRAo3_f-iP-8'"/>
+            </div>
+            <div>
+              <p class="font-bold text-lg text-navy tracking-tight">Amiratama</p>
+              <p class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Semarang, Jawa Tengah</p>
+            </div>
+          </div>
+          <button id="mobile-close-btn" type="button" class="p-2 rounded-lg text-slate-500 hover:text-navy hover:bg-slate-100 focus:outline-none" aria-label="Tutup menu navigasi">
+            <span class="material-symbols-outlined text-[24px]">close</span>
+          </button>
+        </div>
+
+        <!-- Mobile Links with Active State -->
+        <nav class="flex flex-col gap-1.5 py-6" aria-label="Mobile Navigation Links">
+          <a href="#beranda" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-navy font-semibold hover:bg-navy-50 transition-colors active">
+            <span>Beranda</span>
+            <span class="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
+          </a>
+          <a href="#layanan" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-navy font-semibold hover:bg-navy-50 transition-colors">
+            <span>Layanan</span>
+            <span class="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
+          </a>
+          <a href="#destinasi" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-navy font-semibold hover:bg-navy-50 transition-colors">
+            <span>Destinasi</span>
+            <span class="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
+          </a>
+          <a href="#keunggulan" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-navy font-semibold hover:bg-navy-50 transition-colors">
+            <span>Keunggulan</span>
+            <span class="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
+          </a>
+          <a href="#galeri" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-navy font-semibold hover:bg-navy-50 transition-colors">
+            <span>Galeri</span>
+            <span class="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
+          </a>
+          <a href="#kontak" class="mobile-nav-link flex items-center justify-between px-4 py-3 rounded-xl text-navy font-semibold hover:bg-navy-50 transition-colors">
+            <span>Kontak</span>
+            <span class="material-symbols-outlined text-slate-400 text-[20px]">chevron_right</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-slate-100 flex flex-col gap-3">
+        <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20perjalanan%20rombongan." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 w-full py-3.5 px-5 rounded-xl bg-orange hover:bg-orange-dark text-white font-semibold shadow-md transition-colors text-sm">
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+          </svg>
+          <span>Konsultasi via WhatsApp</span>
+        </a>
+        <div class="flex items-center justify-between text-xs text-slate-500 pt-2 px-1">
+          <span>WhatsApp: 0822-2050-3695</span>
+          <a href="https://www.instagram.com/amiratama.id/" target="_blank" rel="noopener noreferrer" class="text-orange font-medium hover:underline">@amiratama.id</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION — FULL-SCREEN DARK CINEMATIC AESTHETIC CAROUSEL (100svh)  -->
+  <!-- ========================================================================= -->
+  <section id="beranda" class="relative w-full h-[100svh] min-h-[640px] flex items-center justify-center overflow-hidden bg-[#07090C]" aria-label="Hero Section Amiratama">
+    
+    <!-- Carousel Background Slides -->
+    <div id="hero-carousel-container" class="absolute inset-0 w-full h-full pointer-events-none">
+      
+      <!-- Slide 1: Modern Executive Tourism Bus (Central Java) -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out" data-index="0">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC49P9wmnJux3wbIkhowz-vaVj159tKaIOkdRAKWZ7Ss9hVhsOpyXWi7hWD3tICoXMHw14tP0la-4unOgQGnkWpEtEK_c7tEFUZwQXLhW48e07MLrnaWxAL4_Ae7n7-rSjatb-NkqKkkBSz9GeYFK6QP87SCDKRqBITXbn29VjKwdJZsLDm0e2GV1gWpEZ3COSL6LTNsDV2jUjRJW9ooUFa2SQHf2Tog6vkoMUw-h8" 
+             alt="Armada bus pariwisata eksekutif Amiratama di lanskap pegunungan Jawa Tengah" 
+             class="hero-img w-full h-full object-cover object-center kenburns-active"/>
+      </div>
+
+      <!-- Slide 2: High School and University Study Tour at Prambanan Temple -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out" data-index="1">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj-3GDx2gedFl1YlgAS7K_l1LpHUEFYInxiExKq2aNpW4vQx3k5jJi0yV-KHjiPbxpWXlEDCdbt5parl5GqtTwO0e0ujagx3DlY1m7yiHqP6vASC7k-mGQ4aMk5FC0fS23MAlTGYostMN-cyKOM490ENPGWBT6Fkud8TDP-6ag4E3w3RUhJP536_DhizZdvpqPGsOGtdIl3h1u-q39TIXG6BmJegHKwP-wGpg9DKY" 
+             alt="Rombongan peserta study tour sekolah dan universitas di Candi Prambanan" 
+             class="hero-img w-full h-full object-cover object-center kenburns-reset" loading="lazy"/>
+      </div>
+
+      <!-- Slide 3: Scenic Bromo Sunrise Landscape & Travelers -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out" data-index="2">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1BU163i8SMyd76ZjdhFd_mhrGg0Jme5nNKjdjOfIp_Ctq1f-ROsqe5o4Omkbg52f3vOPBw7_8LUNdlN_cQzoNhRZhANXIJAPVU9GWYOi5cNSx_qluYjPnJCaAg-eUGMQ638IsE7ga20vUSTCvu-lrxamk2BnO1jgbZwuwss9_zvxp0UWDNpCrTZ6PoL5rVp8alQURjLlTf2iQ1L2J1U5WccT9ut0qoWCn2_1a8Xs" 
+             alt="Pemandangan matahari terbit kawasan Bromo untuk wisata rombongan domestik" 
+             class="hero-img w-full h-full object-cover object-center kenburns-reset" loading="lazy"/>
+      </div>
+
+      <!-- Slide 4: Corporate Outbound & Team Building -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out" data-index="3">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJlpC3Zps02cmTlRBtBtZAm51mh6UtXCDdVUjAnaR5ExRdRqx3xtWjRuHnKn5kQUxUnrYyv2kk42QpUE_-jxLFKqzvFXqOrksnsV0aFr0WWtFMUD3LddXPm8WhguAKuTrbFXBIaqtDOxwGtW8DUVS2sdgG1N2l-Fb4ConxYiVN8xGQlFn2gpuZaamqTORKyV3qBIFw0JXMy1yoYmTE2xPHMWrr6e-KaKXdocdER1w" 
+             alt="Kegiatan outbound dan team building kebersamaan karyawan di alam terbuka" 
+             class="hero-img w-full h-full object-cover object-center kenburns-reset" loading="lazy"/>
+      </div>
+
+    </div>
+
+    <!-- PURE DARK CINEMATIC AESTHETIC OVERLAYS (No blue tint, rich moody charcoal & obsidian film look) -->
+    <div class="absolute inset-0 cinematic-dark-overlay pointer-events-none"></div>
+    <div class="absolute inset-0 cinematic-vignette pointer-events-none"></div>
+
+    <!-- Hero Content Body -->
+    <div class="relative z-20 max-w-7xl mx-auto px-5 sm:px-8 w-full pt-20 pb-12 flex flex-col justify-between h-full">
+      
+      <div class="hidden sm:block"></div>
+
+      <!-- Main Headline Block -->
+      <div class="max-w-3xl flex flex-col gap-5 sm:gap-6 my-auto">
+        
+        <!-- Location & Focus Tag -->
+        <div class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-white/90 text-xs sm:text-sm font-medium w-fit">
+          <span class="material-symbols-outlined text-[16px] text-orange">location_on</span>
+          <span>Semarang, Jawa Tengah</span>
+          <span class="w-1 h-1 rounded-full bg-white/40"></span>
+          <span class="text-white/80">Tour &amp; Event Organizer Terpercaya</span>
+        </div>
+
+        <!-- Strong Master Headline -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold text-white tracking-tight leading-[1.12]">
+          Setiap Perjalanan, <br/>
+          <span class="text-orange inline-block underline decoration-orange/30 decoration-wavy decoration-2">Terkelola</span> dengan Baik.
+        </h1>
+
+        <!-- Supporting Text -->
+        <p class="text-base sm:text-lg md:text-xl text-slate-200/95 font-normal leading-relaxed max-w-2xl">
+          Mulai dari wisata, study tour, kunjungan kerja hingga gathering, Amiratama membantu mengelola kebutuhan perjalanan dan kegiatan rombongan Anda dengan aman, nyaman, dan terkoordinasi.
+        </p>
+
+        <!-- CTA Buttons Row -->
+        <div class="flex flex-wrap items-center gap-3.5 sm:gap-4 pt-2">
+          <!-- Primary CTA (WhatsApp with Official Icon) -->
+          <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20perjalanan%20rombongan." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-orange hover:bg-orange-dark text-white font-semibold text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange/50">
+            <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+            </svg>
+            <span>Konsultasi Sekarang</span>
+          </a>
+
+          <!-- Secondary CTA -->
+          <a href="#layanan" class="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm sm:text-base backdrop-blur-md border border-white/20 hover:border-white/30 transition-all duration-200 focus:outline-none">
+            <span>Jelajahi Layanan</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Row: Slide Indicators + Scroll Guide -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6 border-t border-white/10">
+        
+        <div class="flex items-center gap-3">
+          <button id="carousel-prev" type="button" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none border border-white/20" aria-label="Slide sebelumnya">
+            <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+          </button>
+
+          <div class="flex items-center gap-2" id="carousel-dots" role="tablist" aria-label="Hero Carousel Navigation">
+            <button class="carousel-dot h-2 rounded-full transition-all duration-300 w-8 bg-orange" data-slide="0" aria-label="Slide 1" aria-selected="true" role="tab"></button>
+            <button class="carousel-dot h-2 rounded-full transition-all duration-300 w-2 bg-white/40 hover:bg-white/70" data-slide="1" aria-label="Slide 2" aria-selected="false" role="tab"></button>
+            <button class="carousel-dot h-2 rounded-full transition-all duration-300 w-2 bg-white/40 hover:bg-white/70" data-slide="2" aria-label="Slide 3" aria-selected="false" role="tab"></button>
+            <button class="carousel-dot h-2 rounded-full transition-all duration-300 w-2 bg-white/40 hover:bg-white/70" data-slide="3" aria-label="Slide 4" aria-selected="false" role="tab"></button>
+          </div>
+
+          <button id="carousel-next" type="button" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none border border-white/20" aria-label="Slide berikutnya">
+            <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+          </button>
+
+          <span id="carousel-caption" class="text-xs text-slate-300 font-medium ml-2 hidden md:inline-block">Armada Pariwisata Eksekutif Jawa Tengah &amp; Nusantara</span>
+        </div>
+
+        <a href="#trust-highlights" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-white transition-colors group">
+          <span>Gulir untuk eksplorasi</span>
+          <span class="material-symbols-outlined text-[18px] group-hover:translate-y-1 transition-transform">expand_more</span>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. TRUST HIGHLIGHTS — REFINED HORIZONTAL TRUST STRIP                      -->
+  <!-- ========================================================================= -->
+  <section id="trust-highlights" class="relative z-30 bg-slate-surface border-b border-slate-200/60 py-10 sm:py-12" aria-label="Keunggulan Utama">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        
+        <!-- Pillar 1 -->
+        <div class="reveal-item flex items-start gap-4 p-4 rounded-xl transition-all duration-200">
+          <div class="w-12 h-12 rounded-xl bg-navy/10 text-navy flex items-center justify-center shrink-0 border border-navy/15">
+            <span class="material-symbols-outlined text-[24px]">groups</span>
+          </div>
+          <div>
+            <h2 class="font-bold text-navy text-base tracking-tight leading-snug">Berpengalaman Menangani Rombongan</h2>
+            <p class="text-sm text-slate-body/80 mt-1 leading-relaxed">Terbiasa mengelola perjalanan grup sekolah, kampus, hingga instansi.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="reveal-item flex items-start gap-4 p-4 rounded-xl transition-all duration-200" style="transition-delay: 100ms;">
+          <div class="w-12 h-12 rounded-xl bg-orange-peach text-orange-dark flex items-center justify-center shrink-0 border border-orange/20">
+            <span class="material-symbols-outlined text-[24px]">assignment_turned_in</span>
+          </div>
+          <div>
+            <h2 class="font-bold text-navy text-base tracking-tight leading-snug">Layanan Tour &amp; Organizer Terpadu</h2>
+            <p class="text-sm text-slate-body/80 mt-1 leading-relaxed">Pengelolaan komprehensif mulai dari rute, akomodasi, hingga kelancaran rundown.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="reveal-item flex items-start gap-4 p-4 rounded-xl transition-all duration-200" style="transition-delay: 200ms;">
+          <div class="w-12 h-12 rounded-xl bg-navy/10 text-navy flex items-center justify-center shrink-0 border border-navy/15">
+            <span class="material-symbols-outlined text-[24px]">directions_bus</span>
+          </div>
+          <div>
+            <h2 class="font-bold text-navy text-base tracking-tight leading-snug">Dukungan Armada Pariwisata</h2>
+            <p class="text-sm text-slate-body/80 mt-1 leading-relaxed">Armada bus pariwisata eksekutif yang bersih, nyaman, dan terawat.</p>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="reveal-item flex items-start gap-4 p-4 rounded-xl transition-all duration-200" style="transition-delay: 300ms;">
+          <div class="w-12 h-12 rounded-xl bg-orange-peach text-orange-dark flex items-center justify-center shrink-0 border border-orange/20">
+            <span class="material-symbols-outlined text-[24px]">support_agent</span>
+          </div>
+          <div>
+            <h2 class="font-bold text-navy text-base tracking-tight leading-snug">Respon Cepat &amp; Konsultasi Mudah</h2>
+            <p class="text-sm text-slate-body/80 mt-1 leading-relaxed">Komunikasi terbuka dan responsif dalam penyesuaian jadwal serta anggaran.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. OUR SERVICES — SOPHISTICATED EDITORIAL COMPOSITION (5 Services)         -->
+  <!-- ========================================================================= -->
+  <section id="layanan" class="py-24 lg:py-32 bg-white" aria-label="Portofolio Layanan">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16 lg:mb-20">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-50 text-navy text-xs font-bold uppercase tracking-wider mb-4 border border-navy/10">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+          <span>Portofolio Layanan</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+          Solusi Perjalanan dan Kegiatan dalam Satu Layanan.
+        </h2>
+        <p class="text-base sm:text-lg text-slate-body/85 mt-4 leading-relaxed">
+          Dari perjalanan wisata hingga kegiatan organisasi, Amiratama membantu mengatur kebutuhan perjalanan Anda dengan lebih terencana.
+        </p>
+      </div>
+
+      <!-- Curated Editorial Composition -->
+      <div class="space-y-8 lg:space-y-12">
+        
+        <!-- SERVICE A: Prominent Featured Card (Wisata Dalam & Luar Negeri) -->
+        <div class="reveal-item group rounded-2xl overflow-hidden bg-slate-surface border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300">
+          <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+            
+            <div class="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto overflow-hidden bg-navy-900">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKgzcZApdSUrYroEOrRSMprMwHa_0c5x0GjmEMbtkMGaiqGEQqZ5TOVqeL75rVt-kvF5fEQ6qqgTthqAKbVW4ZFzsmc3brXNfcMuJnQnjdZ9kDaDk3VNxkGgRhUIuVHvjTMrLHOwxhaIADx_cMrBYQIwmOb8Q6zUJMF0MUWCTdP3uHfltNq2914hVnj-_ZsvThWH8UgDyl_pyOQ8TEp_rtfBqrEB3470gz8udcV7I" 
+                   alt="Wisata Dalam &amp; Luar Negeri bersama armada Amiratama" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent lg:hidden"></div>
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-navy text-xs font-bold shadow-sm uppercase tracking-wider">
+                  Layanan Unggulan
+                </span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-xs font-bold uppercase tracking-wider text-orange">01 • Destinasi Luas</span>
+                  <span class="material-symbols-outlined text-navy/40 text-[28px]">flight_takeoff</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-bold text-navy tracking-tight leading-snug">
+                  Wisata Dalam &amp; Luar Negeri
+                </h3>
+                <p class="text-slate-body mt-3 leading-relaxed text-sm sm:text-base">
+                  Paket perjalanan wisata ke berbagai destinasi populer di Indonesia maupun mancanegara yang disesuaikan dengan kebutuhan peserta.
+                </p>
+
+                <div class="flex flex-wrap gap-2 pt-6">
+                  <span class="px-3 py-1 rounded-lg bg-white border border-slate-200/80 text-xs font-medium text-navy">Rute Jawa-Bali</span>
+                  <span class="px-3 py-1 rounded-lg bg-white border border-slate-200/80 text-xs font-medium text-navy">Lombok &amp; Labuan Bajo</span>
+                  <span class="px-3 py-1 rounded-lg bg-white border border-slate-200/80 text-xs font-medium text-navy">Asia Tenggara</span>
+                </div>
+              </div>
+
+              <div class="pt-8 mt-6 border-t border-slate-200/80">
+                <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20paket%20Wisata%20Dalam%20dan%20Luar%20Negeri." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-orange hover:text-orange-dark transition-colors group/cta">
+                  <span>Konsultasikan Kebutuhan</span>
+                  <span class="material-symbols-outlined text-[18px] group-hover/cta:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ROW 2: Balanced Pair (Services B & C) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          
+          <!-- SERVICE B: Study Tour & KKL -->
+          <div class="reveal-item group rounded-2xl overflow-hidden bg-slate-surface border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="h-60 sm:h-64 relative overflow-hidden bg-navy-900">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuANPRpF0oDbwInT2ZRtDKCHknZYmY-Q4jbZV3SYtmBaXo0boGCbafYDNV_idRA0mRW5xeB69bG9LeLe7k6yH4PR8UGBAJfHX3eAXuctIiwW3leRxqTWZZzDjz1tPw0286fZknVhVGxnzeRPszogrMM-8N2mmJFkWWtKzM9B6GLUJsOo7YV7u4ZTPjxuDLcX4UqlWKrjpyaZDa4jZecYCa_Uhq60JrgZTzZQHsWq9iQ" 
+                     alt="Study Tour &amp; KKL bersama Amiratama di Candi Prambanan" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy"/>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-navy text-xs font-bold shadow-sm uppercase tracking-wider">
+                    Sekolah &amp; Kampus
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-6 sm:p-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-orange">02 • Edukasi Terstruktur</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-navy mt-1 tracking-tight">
+                  Study Tour &amp; KKL
+                </h3>
+                <p class="text-slate-body mt-2 text-sm sm:text-base leading-relaxed">
+                  Pengaturan perjalanan edukasi khusus untuk sekolah dan perguruan tinggi dengan susunan acara yang terorganisir.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 pt-0">
+              <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20Study%20Tour%20dan%20KKL." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-orange hover:text-orange-dark transition-colors group/cta">
+                <span>Konsultasikan Kebutuhan</span>
+                <span class="material-symbols-outlined text-[18px] group-hover/cta:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- SERVICE C: Kunjungan Kerja & Gathering Instansi -->
+          <div class="reveal-item group rounded-2xl overflow-hidden bg-slate-surface border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" style="transition-delay: 150ms;">
+            <div>
+              <div class="h-60 sm:h-64 relative overflow-hidden bg-navy-900">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFSXH1id4-E8RweDDW-qhLHLIBQAyDAZzyjzjvPLEa-aeAIKA1id4lGn-xRZ6Fnw7JrFXqz_9u69iGRetNRNRkg-ln5RhDWWj_9TvzN2wuNXckJ1vJruvcjx0jiNVn-M2PrauyLW7zoCAWS6MbR-RLhTPINHg8RjKnZOPT5aoem9FGdExl-7AuGEsM4icDwRfyYS7edLHAzv4IS3hdMVg-Kbl1VEmKoxqCPIUneKk" 
+                     alt="Kunjungan Kerja &amp; Gathering Instansi Amiratama" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy"/>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-navy text-xs font-bold shadow-sm uppercase tracking-wider">
+                    Perusahaan &amp; Dinas
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-6 sm:p-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-orange">03 • Kelembagaan</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-navy mt-1 tracking-tight">
+                  Kunjungan Kerja &amp; Gathering Instansi
+                </h3>
+                <p class="text-slate-body mt-2 text-sm sm:text-base leading-relaxed">
+                  Layanan akomodasi dan transportasi untuk kegiatan dinas, family gathering komunitas, maupun perjalanan rombongan perusahaan.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 pt-0">
+              <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20Kunjungan%20Kerja%20atau%20Gathering%20Instansi." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-orange hover:text-orange-dark transition-colors group/cta">
+                <span>Konsultasikan Kebutuhan</span>
+                <span class="material-symbols-outlined text-[18px] group-hover/cta:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ROW 3: Complementary Pair (Services D & E) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          
+          <!-- SERVICE D: Wisata Ziarah -->
+          <div class="reveal-item group rounded-2xl overflow-hidden bg-slate-surface border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="h-60 sm:h-64 relative overflow-hidden bg-navy-900">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIL1pbUjjQuj9GsxGA13twgqK2Hl62INVlrX_KPxWkiHnQN1vc74l9KdQj5Okq_Sukfg7uvXt4c3ES-FMcTUHKTmVZNpTXuUwZCVEEw1sIPneGksXbZ6Fo3VGnY9bb-H5CRGWfAkFxnO6NAKsdtUrx8kiZD_CbPsE6FEX2Keub77I-n5nWFWM4tkCOA-tBTRSVQDM_6jbB0fTdf-cQBhcslC07VdhaqePRYK9cBAc" 
+                     alt="Wisata Ziarah dan Perjalanan Religi Rombongan" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy"/>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-navy text-xs font-bold shadow-sm uppercase tracking-wider">
+                    Spiritual &amp; Religi
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-6 sm:p-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-orange">04 • Religi Khidmat</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-navy mt-1 tracking-tight">
+                  Wisata Ziarah
+                </h3>
+                <p class="text-slate-body mt-2 text-sm sm:text-base leading-relaxed">
+                  Paket perjalanan religi dan ziarah untuk rombongan dengan rute serta jadwal yang tertata rapi.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 pt-0">
+              <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20paket%20Wisata%20Ziarah." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-orange hover:text-orange-dark transition-colors group/cta">
+                <span>Konsultasikan Kebutuhan</span>
+                <span class="material-symbols-outlined text-[18px] group-hover/cta:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- SERVICE E: Outbound & Kegiatan Lapangan -->
+          <div class="reveal-item group rounded-2xl overflow-hidden bg-slate-surface border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" style="transition-delay: 150ms;">
+            <div>
+              <div class="h-60 sm:h-64 relative overflow-hidden bg-navy-900">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY5ZgoJS29E6OMrrJ1tZvFWSJ7b8ZnZXgHERltC3hOAKia15mE2J41vkk2Sq-UYmexw9FQUOPqt8XNgQx8kzxaJJe0Mt2KmHbvLqivHdtWfBn2R-lOTdSmRujQnR-UpzGOUS0XjVAp_1D7HLFhdEkjB0jBYoOuFoZCCPmeasQU1jOTwjFeuUlfJC3Vbf0-4T32MvGuR5i7LYDB-B8qSqGXRA57qy4Hkl7Sh-78ojA" 
+                     alt="Outbound &amp; Kegiatan Lapangan Team Building" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy"/>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-navy text-xs font-bold shadow-sm uppercase tracking-wider">
+                    Team Dynamic
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-6 sm:p-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-orange">05 • Sinergi &amp; Karakter</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-navy mt-1 tracking-tight">
+                  Outbound &amp; Kegiatan Lapangan
+                </h3>
+                <p class="text-slate-body mt-2 text-sm sm:text-base leading-relaxed">
+                  Penyelenggaraan kegiatan outbound dan team building untuk mempererat kebersamaan tim atau komunitas.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 pt-0">
+              <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20Outbound%20dan%20Kegiatan%20Lapangan." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-orange hover:text-orange-dark transition-colors group/cta">
+                <span>Konsultasikan Kebutuhan</span>
+                <span class="material-symbols-outlined text-[18px] group-hover/cta:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- PAKET WISATA — TRAVEL PACKAGES SECTION                                    -->
+  <!-- ========================================================================= -->
+  <section id="paket-wisata" class="py-24 lg:py-32 bg-slate-surface border-y border-slate-200/80" aria-label="Paket Wisata">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-12 lg:mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-navy text-xs font-bold uppercase tracking-wider mb-4 border border-slate-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+          <span>Paket Wisata</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+          Pilihan Paket Wisata Rombongan
+        </h2>
+        <p class="text-base sm:text-lg text-slate-body/85 mt-4 leading-relaxed">
+          Berbagai pilihan paket perjalanan wisata rombongan ke destinasi populer dengan harga terjangkau dan fasilitas lengkap.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap gap-2 sm:gap-3 mb-10 lg:mb-12" role="tablist" aria-label="Filter Kategori Paket Wisata">
+        <button class="paket-filter-btn active px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 focus:outline-none" data-category="semua" role="tab" aria-selected="true">Semua Paket</button>
+        <button class="paket-filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 focus:outline-none" data-category="jogjakarta" role="tab" aria-selected="false">Jogjakarta</button>
+        <button class="paket-filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 focus:outline-none" data-category="bandung" role="tab" aria-selected="false">Bandung</button>
+        <button class="paket-filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 focus:outline-none" data-category="bali" role="tab" aria-selected="false">Pulau Bali</button>
+        <button class="paket-filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 focus:outline-none" data-category="bromo" role="tab" aria-selected="false">Bromo++</button>
+        <button class="paket-filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 focus:outline-none" data-category="malang" role="tab" aria-selected="false">Arema Malang</button>
+      </div>
+
+      <!-- Package Cards Grid (rendered by JS) -->
+      <div id="paket-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Cards will be injected by JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PAKET WISATA DETAIL MODAL -->
+  <div id="paket-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-label="Detail Paket Wisata">
+    <button id="paket-modal-close" type="button" class="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 text-white/80 hover:text-white p-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors focus:outline-none" aria-label="Tutup detail paket">
+      <span class="material-symbols-outlined text-[28px]">close</span>
+    </button>
+
+    <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl" id="paket-modal-content">
+      <!-- Modal image -->
+      <div class="relative h-56 sm:h-72 overflow-hidden rounded-t-2xl bg-navy-900">
+        <img id="paket-modal-img" src="" alt="" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-5 right-5">
+          <span id="paket-modal-category-badge" class="px-2.5 py-1 rounded-md bg-orange text-white text-[11px] font-bold uppercase tracking-wider mb-1.5 inline-block"></span>
+          <h3 id="paket-modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight"></h3>
+        </div>
+      </div>
+
+      <!-- Modal body -->
+      <div class="p-6 sm:p-8">
+        <!-- Price -->
+        <div class="flex items-center gap-3 mb-6 pb-5 border-b border-slate-200">
+          <span class="material-symbols-outlined text-orange text-[24px]">payments</span>
+          <div>
+            <p class="text-xs text-slate-body/70 font-medium uppercase tracking-wider">Harga per Orang</p>
+            <p id="paket-modal-price" class="text-2xl font-extrabold text-navy tracking-tight"></p>
+          </div>
+        </div>
+
+        <!-- Destinations -->
+        <div class="mb-6">
+          <h4 class="text-sm font-bold text-navy uppercase tracking-wider mb-3 flex items-center gap-2">
+            <span class="material-symbols-outlined text-orange text-[18px]">place</span>
+            Destinasi Kunjungan
+          </h4>
+          <ol id="paket-modal-destinations" class="space-y-2 pl-1"></ol>
+        </div>
+
+        <!-- Facilities -->
+        <div class="mb-8">
+          <h4 class="text-sm font-bold text-navy uppercase tracking-wider mb-3 flex items-center gap-2">
+            <span class="material-symbols-outlined text-orange text-[18px]">verified</span>
+            Fasilitas Termasuk
+          </h4>
+          <ul id="paket-modal-facilities" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></ul>
+        </div>
+
+        <!-- Book Now CTA -->
+        <a id="paket-modal-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-orange hover:bg-orange-dark text-white font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange/50">
+          <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+          </svg>
+          <span>Book Now via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. TRAVEL & ACTIVITY INSPIRATION — PURE VISUAL INSPIRATION                -->
+  <!-- ========================================================================= -->
+  <section id="destinasi" class="py-24 lg:py-32 bg-slate-surface border-y border-slate-200/80" aria-label="Inspirasi Perjalanan &amp; Aktivitas">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-navy text-xs font-bold uppercase tracking-wider mb-4 border border-slate-200">
+            <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+            <span>Eksplorasi Konsep</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+            Inspirasi Pengalaman Rombongan
+          </h2>
+          <p class="text-base sm:text-lg text-slate-body/85 mt-3 leading-relaxed">
+            Ragam pilihan konsep aktivitas kelompok yang dirancang untuk kenyamanan, keakraban, dan momen berkesan.
+          </p>
+        </div>
+
+        <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20merancang%20rute%20custom%20untuk%20rombongan%20kami." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-navy hover:bg-navy-dark text-white font-semibold text-sm transition-all duration-200 shadow-sm shrink-0">
+          <span class="material-symbols-outlined text-[18px]">tune</span>
+          <span>Rancang Rute Custom</span>
+        </a>
+      </div>
+
+      <!-- 6 Visual Engagement Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        
+        <!-- Concept 1: Wisata Domestik -->
+        <div class="reveal-item group relative rounded-2xl overflow-hidden bg-navy-900 shadow-card aspect-[4/5] flex flex-col justify-end p-6 sm:p-8">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1BU163i8SMyd76ZjdhFd_mhrGg0Jme5nNKjdjOfIp_Ctq1f-ROsqe5o4Omkbg52f3vOPBw7_8LUNdlN_cQzoNhRZhANXIJAPVU9GWYOi5cNSx_qluYjPnJCaAg-eUGMQ638IsE7ga20vUSTCvu-lrxamk2BnO1jgbZwuwss9_zvxp0UWDNpCrTZ6PoL5rVp8alQURjLlTf2iQ1L2J1U5WccT9ut0qoWCn2_1a8Xs" 
+               alt="Wisata Domestik Bromo &amp; Alam Nusantara" 
+               class="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider mb-2.5 inline-block">Nusantara</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Wisata Domestik</h3>
+            <p class="text-xs sm:text-sm text-slate-200 mt-2 leading-relaxed">Pesona pegunungan, pantai eksotis, dan keindahan budaya lokal Indonesia.</p>
+          </div>
+        </div>
+
+        <!-- Concept 2: Wisata Internasional -->
+        <div class="reveal-item group relative rounded-2xl overflow-hidden bg-navy-900 shadow-card aspect-[4/5] flex flex-col justify-end p-6 sm:p-8" style="transition-delay: 100ms;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNPKBfaLYvDGhdYuXd2mjEE5ENe9W4x3M6avhCyD9d3BYy3M7l4S-AKL749ncKlZrKwuqCrW7EMYLIb31owPs_RpOPcxsrAZRQAyDvcHSfgBSEfk2oXD2r2lnMwCJYpGNsy2LfgrSDCoY6Cts6P5-w3p2zhvCbAxupttCGFrVsjPRDpretTsNFtjk-wRo8a8NZURI1YLKZNwYf8cKmSNOAkqKcIu8tpWcQRga8UPM" 
+               alt="Wisata Internasional Mancanegara Singapore &amp; Asia" 
+               class="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider mb-2.5 inline-block">Mancanegara</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Wisata Internasional</h3>
+            <p class="text-xs sm:text-sm text-slate-200 mt-2 leading-relaxed">Eksplorasi destinasi mancanegara pilihan dengan rute aman dan efisien.</p>
+          </div>
+        </div>
+
+        <!-- Concept 3: Study Tour & KKL -->
+        <div class="reveal-item group relative rounded-2xl overflow-hidden bg-navy-900 shadow-card aspect-[4/5] flex flex-col justify-end p-6 sm:p-8" style="transition-delay: 200ms;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuANSkcys4EKOxK043sSyYU-rNJBIhfPOPKpY5mgbGO5zWy0sQHH6B3QXXyGl9CTyVmmNMOxYa6Ftavf9C1xgVLd4-hqTYJxHB4pXJulEGNj6tJq2MhBzP4IAWI403a-UrwhrlBpSi4Tyctt1-xMjZrmRGbwfhpWaHa6zKcVO5TPhehP91oNKuwIS48VmG3FFi_9eewBaVN4Au5qC0y420S3Wc5Zuy8xquKNKxMNxbo" 
+               alt="Study Tour &amp; KKL Mahasiswa Edukasi Lapangan" 
+               class="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider mb-2.5 inline-block">Institusi &amp; Kampus</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Study Tour &amp; KKL</h3>
+            <p class="text-xs sm:text-sm text-slate-200 mt-2 leading-relaxed">Edukasi interaktif budaya, industri, dan sejarah yang menambah wawasan peserta.</p>
+          </div>
+        </div>
+
+        <!-- Concept 4: Corporate Gathering -->
+        <div class="reveal-item group relative rounded-2xl overflow-hidden bg-navy-900 shadow-card aspect-[4/5] flex flex-col justify-end p-6 sm:p-8">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4JCN63aQt4W2xkwxPCVfvzqWzJflfnNrlfFJasZEOkvVw8ktPwLoy6uBVBUCOOrPDjkbDZlalsIbniX8fQpr76MITL4jzhOA7I0qRF_TLyN1S8o_VaKh_UVannNd88mH75Ot7uDwUjbsDGhI6ewfOjwz3JYAbLtao22IF1VDy7ld4IVXMCC_5ZBoRRBJY_-bGV-RdtbVVm0GsOhofq8xJkRzV86EcvHYYPRStW-s" 
+               alt="Corporate Gathering &amp; Gala Dinner Resort" 
+               class="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider mb-2.5 inline-block">Sinergi Perusahaan</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Corporate Gathering</h3>
+            <p class="text-xs sm:text-sm text-slate-200 mt-2 leading-relaxed">Penguatan kebersamaan rekan kerja melalui malam keakraban dan rekreasi terencana.</p>
+          </div>
+        </div>
+
+        <!-- Concept 5: Wisata Religi -->
+        <div class="reveal-item group relative rounded-2xl overflow-hidden bg-navy-900 shadow-card aspect-[4/5] flex flex-col justify-end p-6 sm:p-8" style="transition-delay: 100ms;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGQVHADgZU-6-crbEaUpwsL9T_bcTknXqplLwAHHKIpxntxeX0yNBQqnc8b5q92Qry_kp_zEsa58aidMxjVpiuSuk2AOKGsypDk4_bJWObYTvsLaJGq5MqPZbpNViE4L7co18U1oqvuSomTBJ2jqFiyP6-Z9uOeTJPnIuMO2Ppq6rTKuQ30syCCkMarizRCjgKpSGrym6rv6odrpjp0p7uw5J96uPjq7SwQrSUl3Q" 
+               alt="Wisata Religi &amp; Ziarah Bersejarah" 
+               class="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider mb-2.5 inline-block">Ziarah &amp; Ibadah</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Wisata Religi</h3>
+            <p class="text-xs sm:text-sm text-slate-200 mt-2 leading-relaxed">Napak tilas penuh kekhidmatan dengan jadwal ibadah rapi dan akomodasi nyaman.</p>
+          </div>
+        </div>
+
+        <!-- Concept 6: Outbound & Team Building -->
+        <div class="reveal-item group relative rounded-2xl overflow-hidden bg-navy-900 shadow-card aspect-[4/5] flex flex-col justify-end p-6 sm:p-8" style="transition-delay: 200ms;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJlpC3Zps02cmTlRBtBtZAm51mh6UtXCDdVUjAnaR5ExRdRqx3xtWjRuHnKn5kQUxUnrYyv2kk42QpUE_-jxLFKqzvFXqOrksnsV0aFr0WWtFMUD3LddXPm8WhguAKuTrbFXBIaqtDOxwGtW8DUVS2sdgG1N2l-Fb4ConxYiVN8xGQlFn2gpuZaamqTORKyV3qBIFw0JXMy1yoYmTE2xPHMWrr6e-KaKXdocdER1w" 
+               alt="Outbound &amp; Team Building Leadership" 
+               class="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider mb-2.5 inline-block">Dinamika Kelompok</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Outbound &amp; Team Building</h3>
+            <p class="text-xs sm:text-sm text-slate-200 mt-2 leading-relaxed">Aktivitas di alam terbuka yang memacu kepemimpinan, komunikasi, dan keakraban tim.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. WHY CHOOSE AMIRATAMA — PREMIUM EDITORIAL SPLIT LAYOUT                  -->
+  <!-- ========================================================================= -->
+  <section id="keunggulan" class="py-24 lg:py-32 bg-white" aria-label="Mengapa Memilih Amiratama">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Editorial Photography Column -->
+        <div class="lg:col-span-5 relative reveal-item">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-navy-dark">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKgzcZApdSUrYroEOrRSMprMwHa_0c5x0GjmEMbtkMGaiqGEQqZ5TOVqeL75rVt-kvF5fEQ6qqgTthqAKbVW4ZFzsmc3brXNfcMuJnQnjdZ9kDaDk3VNxkGgRhUIuVHvjTMrLHOwxhaIADx_cMrBYQIwmOb8Q6zUJMF0MUWCTdP3uHfltNq2914hVnj-_ZsvThWH8UgDyl_pyOQ8TEp_rtfBqrEB3470gz8udcV7I" 
+                 alt="Pengalaman perjalanan rombongan terorganisir bersama Amiratama" 
+                 class="w-full h-[460px] sm:h-[540px] object-cover" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          </div>
+
+          <div class="absolute -bottom-6 -right-3 sm:right-6 max-w-xs p-5 rounded-2xl bg-navy-dark text-white shadow-2xl border border-white/10 backdrop-blur-md">
+            <div class="flex items-center gap-2 mb-2 text-orange">
+              <span class="material-symbols-outlined text-[20px]">verified</span>
+              <span class="text-xs font-bold uppercase tracking-wider">Kemitraan Terpercaya</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+              Mengutamakan kepastian rundown, kenyamanan peserta, dan transparansi anggaran perjalanan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Advantages List -->
+        <div class="lg:col-span-7 flex flex-col gap-8 reveal-item" style="transition-delay: 150ms;">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-50 text-navy text-xs font-bold uppercase tracking-wider mb-4 border border-navy/10">
+              <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+              <span>Standar Pelayanan</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+              Mengapa Memilih Amiratama?
+            </h2>
+            <p class="text-base sm:text-lg text-orange font-semibold mt-2">
+              Partner Perjalanan Rombongan Terpercaya dari Semarang.
+            </p>
+          </div>
+
+          <div class="space-y-6 pt-2">
+            
+            <!-- Adv 01 -->
+            <div class="flex items-start gap-5 p-5 rounded-xl bg-slate-surface/60 border border-slate-200/80 hover:bg-slate-surface transition-colors">
+              <span class="text-2xl sm:text-3xl font-extrabold text-orange shrink-0 leading-none pt-1">01</span>
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-navy tracking-tight">Berpengalaman Menangani Rombongan Besar</h3>
+                <p class="text-sm text-slate-body mt-1.5 leading-relaxed">
+                  Terbukti dipercaya menangani berbagai perjalanan skala grup, mulai dari mahasiswa (KKL), sekolah, perusahaan, hingga organisasi masyarakat.
+                </p>
+              </div>
+            </div>
+
+            <!-- Adv 02 -->
+            <div class="flex items-start gap-5 p-5 rounded-xl bg-slate-surface/60 border border-slate-200/80 hover:bg-slate-surface transition-colors">
+              <span class="text-2xl sm:text-3xl font-extrabold text-orange shrink-0 leading-none pt-1">02</span>
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-navy tracking-tight">Layanan Tour &amp; Organizer Terpadu</h3>
+                <p class="text-sm text-slate-body mt-1.5 leading-relaxed">
+                  Tidak sekadar menyediakan transportasi, tim kami berperan sebagai event organizer perjalanan yang mengatur jadwal, destinasi, hingga kelancaran acara di lokasi.
+                </p>
+              </div>
+            </div>
+
+            <!-- Adv 03 -->
+            <div class="flex items-start gap-5 p-5 rounded-xl bg-slate-surface/60 border border-slate-200/80 hover:bg-slate-surface transition-colors">
+              <span class="text-2xl sm:text-3xl font-extrabold text-orange shrink-0 leading-none pt-1">03</span>
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-navy tracking-tight">Dukungan Armada Pariwisata Nyaman</h3>
+                <p class="text-sm text-slate-body mt-1.5 leading-relaxed">
+                  Bekerja sama dengan penyedia armada bus pariwisata tepercaya untuk menjamin kenyamanan perjalanan jarak dekat maupun jarak jauh.
+                </p>
+              </div>
+            </div>
+
+            <!-- Adv 04 -->
+            <div class="flex items-start gap-5 p-5 rounded-xl bg-slate-surface/60 border border-slate-200/80 hover:bg-slate-surface transition-colors">
+              <span class="text-2xl sm:text-3xl font-extrabold text-orange shrink-0 leading-none pt-1">04</span>
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-navy tracking-tight">Respon Cepat &amp; Konsultasi Mudah</h3>
+                <p class="text-sm text-slate-body mt-1.5 leading-relaxed">
+                  Layanan reservasi dan konsultasi rencana perjalanan yang responsif untuk memudahkan panitia dalam menyusun anggaran dan itinerary.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 7. SECOND CINEMATIC PARALLAX SECTION                                       -->
+  <!-- ========================================================================= -->
+  <section id="cinematic-quote" class="relative w-full py-28 lg:py-36 bg-[#0B0F15] text-white overflow-hidden" aria-label="Filosofi Perjalanan">
+    
+    <!-- Parallax Background Image -->
+    <div id="parallax-bg" class="absolute inset-0 w-full h-[120%] -top-[10%] bg-cover bg-center pointer-events-none opacity-25 transition-transform duration-75 ease-out" 
+         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMl2Cvcrmco_a3PE_BDuP21UBVVGm8_XvS_Y2LhBa2eHYc6MPrXmsoCY7QnJGS7_gr2HX05Csnz-_kw8QfYWi5un90oNxYg0-h7Sd_gHEjZ92Yf_RXC1GoK2f0y_PmNg3ODvBWDZjafFApduTjiX-De6mfiUcNKdtIvXLQfrRkgu3dOvwmJeMrqUw1fZlDfkan62TcWHM4uMuvMgnt78Wn9bJiZ-2F5w2qqTIbaIU');">
+    </div>
+
+    <!-- Dark Obsidian Gradient Scrim -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/75 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 flex flex-col lg:flex-row items-center justify-between gap-10">
+      <div class="max-w-2xl reveal-item">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange/20 border border-orange/40 text-orange-light text-xs font-bold uppercase tracking-wider mb-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+          <span>Filosofi Perjalanan Kami</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          Lebih dari Sekadar Perjalanan, <br class="hidden sm:inline"/>
+          <span class="text-orange">Ada Cerita</span> yang Dibangun Bersama.
+        </h2>
+        <p class="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed font-normal">
+          Setiap perjalanan rombongan memiliki tujuan dan pengalaman tersendiri. Kami membantu Anda merencanakannya dengan lebih terarah.
+        </p>
+      </div>
+
+      <div class="shrink-0 reveal-item" style="transition-delay: 150ms;">
+        <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20memulai%20diskusi%20rencana%20perjalanan%20rombongan." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-orange hover:bg-orange-dark text-white font-semibold text-base shadow-2xl transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange/50">
+          <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+          </svg>
+          <span>Mulai Diskusi Rombongan</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 8. GALLERY / MOMENTS — EDITORIAL MASONRY + ACCESSIBLE LIGHTBOX            -->
+  <!-- ========================================================================= -->
+  <section id="galeri" class="py-24 lg:py-32 bg-white" aria-label="Galeri Dokumentasi Kegiatan">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-50 text-navy text-xs font-bold uppercase tracking-wider mb-4 border border-navy/10">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+          <span>Dokumentasi Kegiatan</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+          Momen Perjalanan Nyata
+        </h2>
+        <p class="text-base sm:text-lg text-slate-body/85 mt-3 leading-relaxed">
+          Dokumentasi kebersamaan rombongan wisata, edukasi, dan gathering yang telah kami dampingi di berbagai destinasi.
+        </p>
+      </div>
+
+      <!-- Curated Editorial Mosaic Layout (1 large + 2 stacked + 1 wide) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+        
+        <!-- Large Left Feature -->
+        <div class="reveal-item md:col-span-7 group relative rounded-2xl overflow-hidden shadow-card cursor-pointer h-80 sm:h-[460px]" 
+             onclick="openLightbox(0)" 
+             role="button" 
+             tabindex="0" 
+             aria-label="Lihat foto Study Tour &amp; Edukasi Candi Prambanan">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj-3GDx2gedFl1YlgAS7K_l1LpHUEFYInxiExKq2aNpW4vQx3k5jJi0yV-KHjiPbxpWXlEDCdbt5parl5GqtTwO0e0ujagx3DlY1m7yiHqP6vASC7k-mGQ4aMk5FC0fS23MAlTGYostMN-cyKOM490ENPGWBT6Fkud8TDP-6ag4E3w3RUhJP536_DhizZdvpqPGsOGtdIl3h1u-q39TIXG6BmJegHKwP-wGpg9DKY" 
+               alt="Study Tour &amp; Edukasi Budaya Candi Prambanan" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          
+          <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+          </div>
+
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="px-2.5 py-0.5 rounded-md bg-orange text-white text-[11px] font-bold uppercase tracking-wider mb-2 inline-block">Study Tour Kampus</span>
+            <h3 class="text-xl sm:text-2xl font-bold tracking-tight">KKL &amp; Edukasi Budaya Candi Prambanan</h3>
+            <p class="text-xs sm:text-sm text-slate-200 mt-1">Penyusunan rundown rapi dan pendampingan akrab selama kegiatan studi lapangan.</p>
+          </div>
+        </div>
+
+        <!-- Right 2 Stacked Images -->
+        <div class="md:col-span-5 flex flex-col gap-6 lg:gap-8">
+          
+          <!-- Stacked 1: Outbound Team Building -->
+          <div class="reveal-item group relative rounded-2xl overflow-hidden shadow-card cursor-pointer h-56 sm:h-[218px]" 
+               onclick="openLightbox(1)" 
+               role="button" 
+               tabindex="0" 
+               aria-label="Lihat foto Team Building di Alam Terbuka" 
+               style="transition-delay: 100ms;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJlpC3Zps02cmTlRBtBtZAm51mh6UtXCDdVUjAnaR5ExRdRqx3xtWjRuHnKn5kQUxUnrYyv2kk42QpUE_-jxLFKqzvFXqOrksnsV0aFr0WWtFMUD3LddXPm8WhguAKuTrbFXBIaqtDOxwGtW8DUVS2sdgG1N2l-Fb4ConxYiVN8xGQlFn2gpuZaamqTORKyV3qBIFw0JXMy1yoYmTE2xPHMWrr6e-KaKXdocdER1w" 
+                 alt="Team Building di Alam Terbuka Outbound" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider mb-1 inline-block">Outbound &amp; Leadership</span>
+              <h3 class="text-base sm:text-lg font-bold">Team Building di Alam Terbuka</h3>
+            </div>
+          </div>
+
+          <!-- Stacked 2: Wisata Ziarah Masjid -->
+          <div class="reveal-item group relative rounded-2xl overflow-hidden shadow-card cursor-pointer h-56 sm:h-[218px]" 
+               onclick="openLightbox(2)" 
+               role="button" 
+               tabindex="0" 
+               aria-label="Lihat foto Kunjungan Religi Masjid Bersejarah" 
+               style="transition-delay: 150ms;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIL1pbUjjQuj9GsxGA13twgqK2Hl62INVlrX_KPxWkiHnQN1vc74l9KdQj5Okq_Sukfg7uvXt4c3ES-FMcTUHKTmVZNpTXuUwZCVEEw1sIPneGksXbZ6Fo3VGnY9bb-H5CRGWfAkFxnO6NAKsdtUrx8kiZD_CbPsE6FEX2Keub77I-n5nWFWM4tkCOA-tBTRSVQDM_6jbB0fTdf-cQBhcslC07VdhaqePRYK9cBAc" 
+                 alt="Kunjungan Religi Masjid Bersejarah" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <span class="material-symbols-outlined text-[18px]">zoom_in</span>
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="px-2 py-0.5 rounded bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider mb-1 inline-block">Wisata Ziarah</span>
+              <h3 class="text-base sm:text-lg font-bold">Kunjungan Religi Masjid Bersejarah</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Wide Panoramic Bottom Accent -->
+        <div class="reveal-item md:col-span-12 group relative rounded-2xl overflow-hidden shadow-card cursor-pointer h-64 sm:h-80" 
+             onclick="openLightbox(3)" 
+             role="button" 
+             tabindex="0" 
+             aria-label="Lihat foto Kebersamaan Rombongan Perusahaan di Alam Pegunungan" 
+             style="transition-delay: 200ms;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC49P9wmnJux3wbIkhowz-vaVj159tKaIOkdRAKWZ7Ss9hVhsOpyXWi7hWD3tICoXMHw14tP0la-4unOgQGnkWpEtEK_c7tEFUZwQXLhW48e07MLrnaWxAL4_Ae7n7-rSjatb-NkqKkkBSz9GeYFK6QP87SCDKRqBITXbn29VjKwdJZsLDm0e2GV1gWpEZ3COSL6LTNsDV2jUjRJW9ooUFa2SQHf2Tog6vkoMUw-h8" 
+               alt="Kebersamaan &amp; Refreshing Rombongan Perusahaan" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy"/>
+          <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent"></div>
+          
+          <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+          </div>
+
+          <div class="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 text-white max-w-xl">
+            <span class="px-2.5 py-0.5 rounded-md bg-orange text-white text-[11px] font-bold uppercase tracking-wider mb-2 inline-block">Executive Gathering</span>
+            <h3 class="text-xl sm:text-2xl font-bold tracking-tight">Kebersamaan &amp; Refreshing Rombongan Perusahaan</h3>
+            <p class="text-xs sm:text-sm text-slate-200 mt-1 leading-relaxed">Menikmati panorama alam pegunungan dengan kenyamanan fasilitas dan armada terencana.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACCESSIBLE FULL-SCREEN LIGHTBOX MODAL -->
+  <div id="gallery-lightbox" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Penampil Galeri Foto">
+    
+    <button id="lightbox-close" type="button" class="absolute top-5 right-5 sm:top-8 sm:right-8 z-50 text-white/80 hover:text-white p-2.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors focus:outline-none" aria-label="Tutup penampil foto">
+      <span class="material-symbols-outlined text-[28px]">close</span>
+    </button>
+
+    <button id="lightbox-prev" type="button" class="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 z-50 text-white/80 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors focus:outline-none" aria-label="Foto sebelumnya">
+      <span class="material-symbols-outlined text-[32px]">chevron_left</span>
+    </button>
+
+    <button id="lightbox-next" type="button" class="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 z-50 text-white/80 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors focus:outline-none" aria-label="Foto berikutnya">
+      <span class="material-symbols-outlined text-[32px]">chevron_right</span>
+    </button>
+
+    <div class="relative max-w-5xl w-full flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="" class="max-h-[75vh] w-auto max-w-full rounded-xl shadow-2xl object-contain border border-white/10"/>
+      <div class="mt-4 text-center max-w-xl">
+        <p id="lightbox-caption" class="text-white font-semibold text-base sm:text-lg"></p>
+        <p id="lightbox-counter" class="text-xs text-slate-400 mt-1 font-medium"></p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 9. HOW TO PLAN YOUR TRIP — CONNECTED TIMELINE ARCHITECTURE                -->
+  <!-- ========================================================================= -->
+  <section class="py-24 lg:py-32 bg-slate-surface border-t border-slate-200/80" aria-label="Alur Konsultasi Perjalanan">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <div class="max-w-2xl mx-auto text-center mb-16 lg:mb-20">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-navy text-xs font-bold uppercase tracking-wider mb-4 border border-slate-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+          <span>Alur Terarah</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight leading-tight">
+          Langkah Mudah Merencanakan Perjalanan
+        </h2>
+        <p class="text-base sm:text-lg text-slate-body/85 mt-3 leading-relaxed">
+          Alur konsultasi terarah untuk mewujudkan agenda rombongan yang rapi, tepat guna, dan terorganisir.
+        </p>
+      </div>
+
+      <div class="relative">
+        <div class="hidden lg:block absolute top-7 left-12 right-12 h-0.5 bg-slate-200 z-0"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative z-10">
+          
+          <!-- Step 01 -->
+          <div class="reveal-item flex flex-col items-start bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200/80">
+            <div class="w-14 h-14 rounded-2xl bg-orange text-white flex items-center justify-center font-extrabold text-xl mb-5 shadow-md shrink-0">
+              01
+            </div>
+            <h3 class="text-lg font-bold text-navy tracking-tight">Konsultasikan Kebutuhan</h3>
+            <p class="text-sm text-slate-body mt-2 leading-relaxed">
+              Sampaikan jenis kegiatan, perkiraan jumlah peserta, tujuan destinasi, dan kebutuhan khusus rombongan Anda.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="reveal-item flex flex-col items-start bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200/80" style="transition-delay: 100ms;">
+            <div class="w-14 h-14 rounded-2xl bg-navy text-white flex items-center justify-center font-extrabold text-xl mb-5 shadow-md shrink-0">
+              02
+            </div>
+            <h3 class="text-lg font-bold text-navy tracking-tight">Diskusikan Rencana</h3>
+            <p class="text-sm text-slate-body mt-2 leading-relaxed">
+              Diskusikan pilihan destinasi, rundown jadwal, opsi akomodasi, transportasi bus, dan susunan kegiatan di lapangan.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="reveal-item flex flex-col items-start bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200/80" style="transition-delay: 200ms;">
+            <div class="w-14 h-14 rounded-2xl bg-orange text-white flex items-center justify-center font-extrabold text-xl mb-5 shadow-md shrink-0">
+              03
+            </div>
+            <h3 class="text-lg font-bold text-navy tracking-tight">Sesuaikan Anggaran</h3>
+            <p class="text-sm text-slate-body mt-2 leading-relaxed">
+              Konsultasikan kebutuhan dan anggaran agar paket atau fasilitas perjalanan dapat disesuaikan secara proporsional.
+            </p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="reveal-item flex flex-col items-start bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200/80" style="transition-delay: 300ms;">
+            <div class="w-14 h-14 rounded-2xl bg-navy text-white flex items-center justify-center font-extrabold text-xl mb-5 shadow-md shrink-0">
+              04
+            </div>
+            <h3 class="text-lg font-bold text-navy tracking-tight">Konfirmasi Perjalanan</h3>
+            <p class="text-sm text-slate-body mt-2 leading-relaxed">
+              Lanjutkan komunikasi dengan tim Amiratama untuk proses finalisasi rundown, pemesanan, dan konfirmasi keberangkatan.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Committee Helper Callout -->
+      <div class="mt-12 sm:mt-16 p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6 reveal-item">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-orange-peach text-orange-dark flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[26px]">schedule</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-navy text-base sm:text-lg">Butuh Penawaran Cepat untuk Rapat Panitia?</h3>
+            <p class="text-xs sm:text-sm text-slate-body mt-0.5">Tim konsultan kami siap membantu memberikan estimasi rute dan armada yang tepat.</p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20panitia%20kami%20memerlukan%20estimasi%20penawaran%20cepat%20untuk%20rapat." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-navy hover:bg-navy-dark text-white font-semibold text-sm transition-colors shrink-0">
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+          </svg>
+          <span>Chat Konsultan Panitia</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 10. FINAL CONVERSION CTA SECTION                                          -->
+  <!-- ========================================================================= -->
+  <section id="kontak" class="py-24 lg:py-32 bg-navy-dark text-white relative overflow-hidden" aria-label="Kontak dan Reservasi">
+    
+    <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-orange/15 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-navy/40 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+      <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-navy to-navy-dark border border-white/10 p-8 sm:p-12 lg:p-16 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10">
+        
+        <div class="max-w-2xl reveal-item">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange/20 border border-orange/40 text-orange-light text-xs font-bold uppercase tracking-wider mb-4">
+            <span class="material-symbols-outlined text-[16px] text-orange">headset_mic</span>
+            <span>Konsultasi Rombongan</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Rencanakan Perjalanan Rombongan Anda Bersama Amiratama.
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-200 mt-4 leading-relaxed font-normal">
+            Ceritakan kebutuhan perjalanan atau kegiatan Anda. Tim Amiratama siap membantu mendiskusikan rencana yang sesuai, transparan, dan terkoordinasi dengan baik.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 pt-6 text-xs sm:text-sm text-slate-200">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 fill-current text-orange shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+              </svg>
+              <span class="font-medium">0822-2050-3695</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 fill-current text-orange shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <a href="https://www.instagram.com/amiratama.id/" target="_blank" rel="noopener noreferrer" class="hover:underline">@amiratama.id</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-orange text-[18px]">location_on</span>
+              <span>Semarang, Jawa Tengah</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="shrink-0 w-full lg:w-auto flex flex-col items-center lg:items-end gap-3 reveal-item" style="transition-delay: 150ms;">
+          <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20perjalanan%20rombongan." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 sm:py-5 rounded-2xl bg-orange hover:bg-orange-dark text-white font-bold text-base sm:text-lg shadow-2xl transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange/50">
+            <!-- Official WhatsApp SVG -->
+            <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+            </svg>
+            <span>Konsultasi via WhatsApp</span>
+          </a>
+          <span class="text-xs text-slate-300">Respon cepat pada jam operasional</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 11. FOOTER — CLEAN, PROFESSIONAL & GROUNDED                               -->
+  <!-- ========================================================================= -->
+  <footer class="w-full bg-[#111F34] text-slate-300 border-t border-white/10" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/10">
+        
+        <!-- Brand & Description -->
+        <div class="lg:col-span-4 flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-lg overflow-hidden bg-white/10 p-1 border border-white/20">
+              <img src="images/logo-brand.jpg" alt="Amiratama Logo" class="h-full w-full object-contain rounded" onerror="this.src='https://lh3.googleusercontent.com/aida/ALJJyrC_RgDWNjy4Z3wPoT6ErdoQTlBDtnj87_cscEpIdJz4VUb1lFcaHZyKbDUcZH4Hov9RkfZR202xOy9mDWUjX7re0qKtu0gttgT-9kRv7iydHus5UT9wJpM64ifHUcDUARZcrzAaFDVzA3I0dEHwlic-ghdUe3joTRU7CyBzyOIQqKeBcFRJIlGjod1uQFnk2JS0IRmXYfufHCCftYz7PydESEGqqbACYm7wSibm9zKrtZuIRAo3_f-iP-8'"/>
+            </div>
+            <div>
+              <p class="font-bold text-xl text-white tracking-tight">Amiratama Tour and Organizer</p>
+              <p class="text-[11px] font-semibold text-orange uppercase tracking-wider">Amiratama ID</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-300/85 leading-relaxed mt-1">
+            Penyelenggara perjalanan wisata dan organizer rombongan terpercaya berpusat di Semarang, Jawa Tengah. Siap mendampingi kebutuhan wisata, study tour, gathering, religi, dan outbound.
+          </p>
+          <div class="flex items-center gap-2 pt-2 text-xs text-slate-400">
+            <span class="material-symbols-outlined text-orange text-[18px]">verified</span>
+            <span>Dedicated Group Travel &amp; Organizer Management</span>
+          </div>
+        </div>
+
+        <!-- Main Services -->
+        <div class="lg:col-span-3 flex flex-col gap-3">
+          <p class="font-bold text-sm text-white uppercase tracking-wider mb-1">Layanan Utama</p>
+          <a href="#layanan" class="text-sm text-slate-300 hover:text-white transition-colors">Wisata Dalam &amp; Luar Negeri</a>
+          <a href="#layanan" class="text-sm text-slate-300 hover:text-white transition-colors">Study Tour &amp; KKL</a>
+          <a href="#layanan" class="text-sm text-slate-300 hover:text-white transition-colors">Kunjungan Kerja &amp; Gathering</a>
+          <a href="#layanan" class="text-sm text-slate-300 hover:text-white transition-colors">Wisata Ziarah</a>
+          <a href="#layanan" class="text-sm text-slate-300 hover:text-white transition-colors">Outbound &amp; Kegiatan Lapangan</a>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div class="lg:col-span-2 flex flex-col gap-3">
+          <p class="font-bold text-sm text-white uppercase tracking-wider mb-1">Navigasi</p>
+          <a href="#beranda" class="text-sm text-slate-300 hover:text-white transition-colors">Beranda</a>
+          <a href="#layanan" class="text-sm text-slate-300 hover:text-white transition-colors">Layanan</a>
+          <a href="#destinasi" class="text-sm text-slate-300 hover:text-white transition-colors">Destinasi</a>
+          <a href="#keunggulan" class="text-sm text-slate-300 hover:text-white transition-colors">Keunggulan</a>
+          <a href="#galeri" class="text-sm text-slate-300 hover:text-white transition-colors">Galeri</a>
+          <a href="#kontak" class="text-sm text-slate-300 hover:text-white transition-colors">Kontak</a>
+        </div>
+
+        <!-- Contact & Base Info -->
+        <div class="lg:col-span-3 flex flex-col gap-3.5">
+          <p class="font-bold text-sm text-white uppercase tracking-wider mb-1">Kantor &amp; Kontak</p>
+          <div class="flex items-start gap-2.5 text-sm">
+            <span class="material-symbols-outlined text-orange text-[18px] shrink-0 mt-0.5">location_on</span>
+            <span>Semarang, Jawa Tengah, Indonesia</span>
+          </div>
+          <div class="flex items-center gap-2.5 text-sm">
+            <svg class="w-4 h-4 fill-current text-orange shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+            </svg>
+            <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20perjalanan%20rombongan." target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+              WhatsApp: 0822-2050-3695
+            </a>
+          </div>
+          <div class="flex items-center gap-2.5 text-sm">
+            <svg class="w-4 h-4 fill-current text-orange shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <a href="https://www.instagram.com/amiratama.id/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+              Instagram: @amiratama.id
+            </a>
+          </div>
+          <div class="pt-2">
+            <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20perjalanan%20rombongan." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-orange hover:bg-orange-dark text-white text-xs font-semibold shadow-sm transition-colors">
+              <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+              </svg>
+              <span>Chat WhatsApp Resmi</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>© 2026 Amiratama Tour and Organizer. All rights reserved. Semarang, Jawa Tengah.</p>
+        <p class="text-slate-400">Solusi Perjalanan &amp; Kegiatan Rombongan Terpercaya</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================= -->
+  <!-- 12. FLOATING WHATSAPP BUTTON (With Authentic WhatsApp Icon & Pulse)       -->
+  <!-- ========================================================================= -->
+  <div class="fixed bottom-6 right-6 z-40 group">
+    <a href="https://wa.me/6282220503695?text=Halo%20Amiratama%2C%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20perjalanan%20rombongan." target="_blank" rel="noopener noreferrer" class="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none animate-pulse-whatsapp" aria-label="Konsultasi WhatsApp Langsung">
+      <!-- Official WhatsApp SVG -->
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.13 15.86C14.15 16.73 14.56 16.56 15 16.52C15.44 16.48 16.42 15.93 16.62 15.35C16.82 14.77 16.82 14.28 16.76 14.18C16.7 14.07 16.54 14.01 16.3 13.89C16.06 13.77 14.88 13.19 14.66 13.11C14.44 13.03 14.28 12.99 14.12 13.23C13.96 13.48 13.5 14.01 13.36 14.17C13.22 14.33 13.08 14.35 12.84 14.23C12.6 14.11 11.83 13.86 10.91 13.04C10.2 12.4 9.71 11.62 9.57 11.38C9.43 11.14 9.56 11 9.68 10.88C9.79 10.77 9.92 10.6 10.04 10.46C10.16 10.32 10.2 10.22 10.28 10.06C10.36 9.9 10.32 9.76 10.26 9.64C10.2 9.52 9.74 8.38 9.54 7.91C9.35 7.45 9.16 7.51 9.02 7.51C8.89 7.5 8.71 7.33 8.53 7.33Z"/>
+      </svg>
+      <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-white rounded-full border-2 border-[#25D366]"></span>
+    </a>
+    
+    <div class="absolute right-16 top-1/2 -translate-y-1/2 hidden md:block opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap bg-[#0B0F15] text-white text-xs font-semibold py-1.5 px-3 rounded-lg shadow-xl border border-white/10 mr-2">
+      Chat WhatsApp (0822-2050-3695)
+    </div>
+  </div>
+
+</body>
+</html>
